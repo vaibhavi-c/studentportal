@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body class="landing">
+    <!-- Start of Navigation Bar -->
+    <ul class="navbar">
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="student_login.html">Are you a Student?</a></li>
+        <li><a href="teacher_login.html" class="active">Are you a Teacher?</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>     
+    </ul>
+    <!-- End of Navigation Bar -->
+
+    <h1>Teacher Login</h1>
+    <div class="container">
+        
+        <br>
+        <form>
+            <b>Teacher ID: </b>
+            <input type="text" name="username" id="name" placeholder="Enter Teacher ID here" required><br><br>
+
+            <b>Password: </b>
+            <input type="password" name="password" placeholder="Enter password here" required><br><br>
+
+            <input type="submit" name="submit" id="btn-alert"  formaction="student_dashboard.html" value="Login">
+        </form>
+        <br><br>
+        <b><a href="register.html">Haven't registered yet? Register here!</a><b>
+    </div>
+
+    <script>
+        var user_name = document.getElementById("name");
+        document.getElementById("btn-alert").addEventListener("click", function(){
+            var value=username.value;
+            alert("Logged in as " + value + "");
+        });
+    </script>
+    
+</body>
+</html>

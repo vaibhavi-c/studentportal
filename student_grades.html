@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .marks{
+            background-color: silver;
+            margin-left: 15%;
+        }
+    </style>
+</head>
+<body onload="displayAvg()">
+    <!-- Start of Navigation Bar -->
+    <ul class="navbar">
+        <li><a href="student_dashboard.html" class="logo"><span class="color-text">Dash</span>board</a></li>
+        <li><a href="courses_offered.html">Courses</a></li>
+        <li><a href="student_grades.html" class="active">Grades</a></li>
+        <li><a href="upcoming_events.html">Upcoming events</a></li>
+        <li onclick="logOut()"><a href="#">Log out</a></li>  
+             
+    </ul>
+    <!-- End of Navigation Bar -->
+
+    <script src="js\logout.js">   
+    </script>
+
+    <h1>Grades</h1>
+
+    <table cellspacing=5  cellpadding=5 border=1 style="margin-left: 40%;" class="container center">
+        <tr>
+            <th rowspan="2">Sr no.</th>
+            <th rowspan="2">Subject</th>
+            <th colspan="4">Marks</th>
+        </tr>
+
+        <tr>
+            <th>ISE 1</th>
+            <th>ISE 2</th>
+            <th>ISE 3</th>
+            <th>ESE</th>
+            <th>Total</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Data Structures</td>
+            <td>18</td>
+            <td>20</td>
+            <td>20</td>
+            <td>55</td>
+            <td>84</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>DBMS</td>
+            <td>18</td>
+            <td>20</td>
+            <td>20</td>
+            <td>44</td>
+            <td>81</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Java </td>
+            <td>19</td>
+            <td>20</td>
+            <td>18</td>
+            <td>60</td>
+            <td>79</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Statistics </td>
+            <td>19</td>
+            <td>20</td>
+            <td>18</td>
+            <td>64</td>
+            <td>83</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <div class="container marks">
+        <b>Average Marks:</b>
+        <p id="showAverage"></p>
+
+    </div>
+
+    <script>
+        function displayAvg(){
+            let average = (84+81+79+83)/4;
+            average = Math.ceil(average);
+            document.getElementById("showAverage").innerHTML=average;
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="css\dashboard.css">
+
+  <script>
+    function displayDate(){
+      document.getElementById("showDate").innerHTML=Date();
+      
+    }
+    
+  </script>
+</head>
+
+<body id="body" onload="displayDate()">
+  <!-- Start of Navigation Bar -->
+  <ul class="navbar">
+    <li><a href="student_dashboard.html" class="logo active"><span class="color-text">Dash</span>board</a></li>
+    <li><a href="courses_offered.html">Courses</a></li>
+    <li><a href="student_grades.html">Grades</a></li>
+    <li><a href="upcoming_events.html">Upcoming events</a></li>
+    <li onclick="logOut()"><a href="#">Log out</a></li>  
+  </ul>
+  <!-- End of Navigation Bar -->
+
+  <script src="js/logout.js"></script>
+
+  
+
+  <h1>Welcome to your Dashboard</h1>
+  <br>
+  
+  <marquee direction=right bgcolor="silver"><h3>Don't forget to register for the Hackathon!</h3></marquee>
+  <br>
+  
+  <div class="date container">
+    <p id="showDate" >Todays Date:</p>  
+  </div>
+  <br>
+
+   <div class="main-container">
+    <div class="heading">
+      <h2 class="heading__title">Jane Doe TE IT UID: 12</21>
+        <p class="heading__credits"><a class="heading__link" target="_blank" >Courses
+            Enrolled in</a></p>
+    </div>
+    <div class="cards">
+      <div class="card card-3">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">Operating Systems</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#">Go to course <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-3">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">Psychology</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#">Go to course <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-3">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">Software Engineering</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#">Go to course <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-3">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">DAA</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#">Go to course<i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-3">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">Computer Networks</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#">Go to course <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="card card-3">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">Calculus</h2>
+        <p class="card__apply">
+          <a class="card__link" href="#">Go to course <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+    </div>
+  </div> 
+
+  
+
+
+</body>
+
+</html>

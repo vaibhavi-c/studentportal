@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body class="student">
+
+    <!-- Start of Navigation Bar -->
+    <ul class="navbar">
+        <li><a href="student_dashboard.html" class="logo"><span class="color-text">Dash</span>board</a></li>
+        <li><a href="courses_offered.html" class="active">Courses</a></li>
+        <li><a href="student_grades.html">Grades</a></li>
+        <li><a href="upcoming_events.html">Upcoming events</a></li> 
+        <li onclick="logOut()"><a href="#">Log out</a></li>      
+    </ul>
+    <!-- End of Navigation Bar -->
+    <script src="js/logout.js"></script>
+
+    <h1>Courses Offered</h1>
+
+    <!-- Courses Offered -->
+    <div class="gallery">
+        <a target="_blank" href="images/ai.webp">
+            <img src="images/ai.webp" alt="pic1" width="300" height="200" onclick="display();">
+        </a>
+        <div class="desc">Machine Learning and Artificial Intelligence</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="images/uiux.webp" >
+            <img src="images/uiux.webp" alt="pic1" width="300" height="200" onclick="display();">
+        </a>
+        <div class="desc">Human Machine Interaction (UI/UX)</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="images/bizanalyst.webp">
+            <img src="images/bizanalyst.webp" alt="pic2" width="300" height="200" onclick="display();">
+        </a>
+        <div class="desc">Business Data Analytics</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="images/a1.webp">
+            <img src="images/webdev.webp" alt="pic3" width="300" height="200" onclick="display();">
+        </a>
+        <div class="desc">Full Stack Web Development</div>
+    </div>
+
+    <script src="js\register.js"></script>
+    
+</body>
+</html>

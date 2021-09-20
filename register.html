@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register here</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body class="landing">
+    <!-- Start of Navigation Bar -->
+    <ul class="navbar">
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="student_login.html">Are you a Student?</a></li>
+        <li><a href="teacher_login.html">Are you a Teacher?</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>     
+    </ul>
+    <!-- End of Navigation Bar -->
+
+    <h1 style="color: brown;">Register here!</h1>
+    <form class="container">
+        <br>
+
+        <b>Name: </b> <input type="text" name="name" id="name" placeholder="Enter name here" required><br><br>
+        
+        <b>Username: </b> <input type="text" name="username" id="username" placeholder="Enter username here" required><br><br>
+
+        <b>Password: </b><input type="password" name="password" placeholder="Enter password here"><br><br>
+
+
+        <!-- To select one option -->
+        <b>Gender:</b><input type="radio" name="r1">Male
+        <input type="radio" name="r1">Female
+        <input type="radio" name="r1">Other<br><br>
+
+        <!-- Dropdown list -->
+        <b>Registering as: </b>
+        <select id="s1" name="section" onChange="SelectRedirect();">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>>
+        </select><br><br>
+
+        <b>Phone number: </b><input type="number" id="number" name="phone" placeholder="Enter phone number here"><br><br>
+
+        <b>Email: </b><input type="email" name="email" id="email" placeholder="Enter email address here"><br><br>
+
+        <b>Address:</b>
+        <textarea rows=3 name="addr" placeholder="Enter residential address here"></textarea><br><br>
+
+        <input type="reset" name="reset" value="Save Changes" onclick="setCookie1();entrycheck()">
+        <input type="submit" name="submit" value="Submit" onclick="getCookie();">
+        
+    
+    </form>
+    <script>  
+        function setCookie1()  
+        {  
+            //Declaring 3 key-value pairs  
+            var info="Name="+ document.getElementById("name").value+";Email="+document.getElementById("email").value+";Username="+document.getElementById("username").value;  
+            //Providing all 3 key-value pairs to a single cookie  
+            document.cookie=info;  
+        }  
+      
+        function getCookie()  
+        {  
+            if(document.cookie.length!=0)  
+            {  
+           //Invoking key-value pair stored in a cookie  
+            alert(document.cookie);  
+            }  
+            else  
+            {  
+            alert("Cookie not available")  
+            }  
+        } 
+
+        
+        
+        function entrycheck(){
+        try{
+            var agecheck=prompt("Enter your age: ")
+            if (isNaN(parseInt(agecheck)))
+                throw new Error("Please enter a valid age")
+
+            else if (agecheck<13)
+                throw new Error("Sorry, but you are too young for this site")
+            alert("Registered Successfully!")
+        }
+        catch(e){
+            alert(e.name+" "+e.message)
+        }
+}
+
+    </script>  
+    <script src="js\register.js"></script>
+
+</body>
+</html>
